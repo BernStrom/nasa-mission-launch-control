@@ -6,6 +6,7 @@ import {
   withStyles,
 } from 'arwes';
 import { Link } from 'react-router-dom';
+import Centered from './Centered';
 
 const styles = (theme) => ({
   root: {
@@ -60,8 +61,34 @@ const styles = (theme) => ({
   },
 });
 
-const Header = (props) => {
-  return <ArwesHeader animate></ArwesHeader>
-}
+const Header = ({ classes, ...rest }) => {
+  return (
+    <ArwesHeader animate>
+      <Centered className={classes.root} {...rest}>
+        <img
+          src='/favicon.png'
+          alt=''
+          className={classes.img}
+          style={{
+            margin: '15px 10px 15px 0',
+            height: '50px',
+            width: 'auto',
+          }}
+        />
+        <Logo animate size={50} className={classes.logo} layer='header' />
+        <Words animate className={classes.banner}>
+          NASA Mission Control
+        </Words>
+        <nav className={`${classes.nav}`}>
+          <Highlight className={classes.button} animate layer='header'>
+            <Link className={classes.link} to='/launch'>
+              <i className='material-icons'>check_circle_outline</i>Launch
+            </Link>
+          </Highlight>
+        </nav>
+      </Centered>
+    </ArwesHeader>
+  );
+};
 
 export default withStyles(styles)(Header);
