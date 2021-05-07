@@ -72,6 +72,7 @@ const Launch = (props) => {
             Launch Mission ✔
           </Button>
         </Clickable>
+        {props.isPendingLaunch && <Loading animate small />}
       </form>
     </Appear>
   );
