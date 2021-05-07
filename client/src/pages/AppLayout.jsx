@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import { Frame, withSounds, withStyles } from 'arwes';
 
 import usePlanets from '../hooks/usePlanets';
+import useLaunches from '../hooks/useLaunches';
 
 import Header from '../components/Header';
 import Centered from '../components/Centered';
@@ -37,6 +38,12 @@ const AppLayout = ({ sounds, classes }) => {
   const onAbortSound = () => sounds.abort && sounds.abort.play();
   const onFailureSound = () => sounds.warning && sounds.warning.play();
 
+  const { launches, isPendingLaunch, submitLaunch, abortLaunch } = useLaunches(
+    onSuccessSound,
+    onAbortSound,
+    onFailureSound
+  );
+
   const planets = usePlanets();
 
   return (
@@ -53,7 +60,12 @@ const AppLayout = ({ sounds, classes }) => {
             <div style={{ padding: '20px' }}>
               <Switch>
                 <Route exact path='/'>
-                  <Launch entered={anim.entered} planets={planets} />
+                  <Launch
+                    entered={anim.entered}
+                    planets={planets}
+                    submitLaunch={submitLaunch}
+                    isPendingLaunch={isPendingLaunch}
+                  />
                 </Route>
               </Switch>
             </div>
