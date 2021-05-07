@@ -3,7 +3,10 @@ import { Switch, Route } from 'react-router-dom';
 import { Frame, withSounds, withStyles } from 'arwes';
 
 import Header from '../components/Header';
+import Centered from '../components/Centered';
 import Footer from '../components/Footer';
+
+import Launch from './Launch';
 
 const styles = () => ({
   content: {
@@ -35,6 +38,24 @@ const AppLayout = ({ sounds, classes }) => {
   return (
     <div className={classes.content}>
       <Header onNav={animateFrame} />
+      <Centered className={classes.centered}>
+        <Frame
+          animate
+          show={frameVisible}
+          corners={4}
+          style={{ visibility: frameVisible ? 'visible' : 'hidden' }}
+        >
+          {(anim) => (
+            <div style={{ padding: '20px' }}>
+              <Switch>
+                <Route exact path='/'>
+                  <Launch entered={anim.entered} />
+                </Route>
+              </Switch>
+            </div>
+          )}
+        </Frame>
+      </Centered>
       <Footer />
     </div>
   );
