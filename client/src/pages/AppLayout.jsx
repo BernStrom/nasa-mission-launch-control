@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Frame, withSounds, withStyles } from 'arwes';
 
+import usePlanets from '../hooks/usePlanets';
+
 import Header from '../components/Header';
 import Centered from '../components/Centered';
 import Footer from '../components/Footer';
@@ -35,6 +37,8 @@ const AppLayout = ({ sounds, classes }) => {
   const onAbortSound = () => sounds.abort && sounds.abort.play();
   const onFailureSound = () => sounds.warning && sounds.warning.play();
 
+  const planets = usePlanets();
+
   return (
     <div className={classes.content}>
       <Header onNav={animateFrame} />
@@ -49,7 +53,7 @@ const AppLayout = ({ sounds, classes }) => {
             <div style={{ padding: '20px' }}>
               <Switch>
                 <Route exact path='/'>
-                  <Launch entered={anim.entered} />
+                  <Launch entered={anim.entered} planets={planets} />
                 </Route>
               </Switch>
             </div>
