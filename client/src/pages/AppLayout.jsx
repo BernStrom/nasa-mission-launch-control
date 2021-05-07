@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import { Frame, withSounds, withStyles } from 'arwes';
 
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const styles = () => ({
   content: {
@@ -26,6 +27,7 @@ const AppLayout = ({ sounds, classes }) => {
   return (
     <div className={classes.content}>
       <Header />
+      <Footer />
     </div>
   );
 };
