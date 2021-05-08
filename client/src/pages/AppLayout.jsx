@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 
 import Launch from './Launch';
 import Upcoming from './Upcoming';
+import History from './History';
 
 const styles = () => ({
   content: {
@@ -82,6 +83,9 @@ const AppLayout = ({ sounds, classes }) => {
                     launches={launches}
                     abortLaunch={abortLaunch}
                   />
+                </Route>
+                <Route exact path='/history'>
+                  <History entered={anim.entered} launches={launches} />
                 </Route>
               </Switch>
             </div>
