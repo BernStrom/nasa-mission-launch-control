@@ -10,6 +10,7 @@ import Centered from '../components/Centered';
 import Footer from '../components/Footer';
 
 import Launch from './Launch';
+import Upcoming from './Upcoming';
 
 const styles = () => ({
   content: {
@@ -73,6 +74,13 @@ const AppLayout = ({ sounds, classes }) => {
                     planets={planets}
                     submitLaunch={submitLaunch}
                     isPendingLaunch={isPendingLaunch}
+                  />
+                </Route>
+                <Route exact path='/upcoming'>
+                  <Upcoming
+                    entered={anim.entered}
+                    launches={launches}
+                    abortLaunch={abortLaunch}
                   />
                 </Route>
               </Switch>
