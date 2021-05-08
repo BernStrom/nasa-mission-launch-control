@@ -1,0 +1,23 @@
+{
+  "name": "nasa-mission-launch-control",
+  "version": "1.0.0",
+  "description": "NASA Mission Launch Control for interstellar space flights",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "cd server && yarn",
+    "install-client": "cd client && yarn",
+    "install": "yarn install-server && yarn install-client",
+    "server": "cd server && yarn watch",
+    "client": "cd client && yarn start",
+    "watch": "yarn server & yarn client",
+    "deploy": "cd client && yarn build && cd .. && cd server && yarn start",
+    "test": "yarn test --prefix server && yarn test --prefix client"
+  },
+  "repository": {
+    "url": "https://github.com/BernStrom/nasa-mission-launch-control",
+    "type": "git"
+  },
+  "author": "Bern <bernnystrom@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
