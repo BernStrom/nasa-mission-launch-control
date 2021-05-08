@@ -67,7 +67,7 @@ const Header = ({ classes, onNav, ...rest }) => {
     <ArwesHeader animate>
       <Centered className={classes.root} {...rest}>
         <img
-          src='/favicon.png'
+          src='/favicon.ico'
           alt=''
           className={classes.img}
           style={{
