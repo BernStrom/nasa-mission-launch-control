@@ -67,6 +67,14 @@ const AppLayout = ({ sounds, classes }) => {
                     isPendingLaunch={isPendingLaunch}
                   />
                 </Route>
+                <Route exact path='/launch'>
+                  <Launch
+                    entered={anim.entered}
+                    planets={planets}
+                    submitLaunch={submitLaunch}
+                    isPendingLaunch={isPendingLaunch}
+                  />
+                </Route>
               </Switch>
             </div>
           )}
