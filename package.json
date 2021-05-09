@@ -11,7 +11,7 @@
     "client": "cd client && yarn start",
     "watch": "yarn server & yarn client",
     "deploy": "cd client && yarn build && cd .. && cd server && yarn start",
-    "test": "yarn test --prefix server && yarn test --prefix client"
+    "test": "cd server && yarn test && cd .. && cd client && yarn test"
   },
   "repository": {
     "url": "https://github.com/BernStrom/nasa-mission-launch-control",
