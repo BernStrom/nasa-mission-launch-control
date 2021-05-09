@@ -11,6 +11,7 @@
     "client": "cd client && yarn start",
     "watch": "yarn server & yarn client",
     "deploy": "cd client && yarn build && cd .. && cd server && yarn start",
+    "deploy-cluster": "cd client && yarn build && cd .. && cd server && yarn cluster",
     "test": "cd server && yarn test && cd .. && cd client && yarn test"
   },
   "repository": {
