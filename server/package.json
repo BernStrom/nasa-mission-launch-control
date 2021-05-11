@@ -13,6 +13,9 @@
   "repository": "https://github.com/BernStrom/nasa-mission-launch-control/tree/main/server",
   "author": "Bern",
   "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
   "private": true,
   "dependencies": {
     "cors": "^2.8.5",
