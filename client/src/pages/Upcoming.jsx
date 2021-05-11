@@ -41,7 +41,7 @@ const Upcoming = ({ entered, launches, classes, abortLaunch }) => {
     <Appear id='upcoming' animate show={entered}>
       <Paragraph>
         Upcoming missions including both SpaceX launches and newly scheduled
-        Zero to Mastery rockets.
+        interstellar rockets.
       </Paragraph>
       <Words animate>Warning! Clicking on the ✖ aborts the mission.</Words>
       <Table animate show={entered}>
