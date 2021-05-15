@@ -1,12 +1,12 @@
+<h1 align="center">
+  <em>NASA Mission Launch Control</em>
+</h1>
+
 <div align="center">
   <img src="https://raw.githubusercontent.com/BernStrom/nasa-mission-launch-control/main/client/public/logo192.png" alt="NASA Mission Launch Control app logo" />
 </div>
 
 <br />
-
-<h1 align="center">
-  <em>NASA Mission Launch Control</em>
-</h1>
 
 ## About
 A mission control dashboard for launching and managing interstellar space flight missions to "garden" planets flagged as an Kepler Object of Interest(KOIs). An unofficial project in collaboration with NASA and SpaceX, inspired by the Artemis Program.
@@ -21,7 +21,7 @@ MERN stands for MongoDB, Express, React, Node, after the four key technologies t
 * React(.js) - a client-side JavaScript framework
 * Node(.js) - the premier JavaScript web server
 
-<img width="400px" height="auto" src="https://webassets.mongodb.com/_com_assets/cms/mern-stack-b9q1kbudz0.png" alt="MERN Stack Architecture" />&nbsp;
+<img src="https://webassets.mongodb.com/_com_assets/cms/mern-stack-b9q1kbudz0.png" alt="MERN Stack Architecture" />
 
 _**Further details on the project documentation coming soon~**_
 
