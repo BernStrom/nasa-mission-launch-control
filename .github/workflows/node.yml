@@ -20,7 +20,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
       - name: Use MongoDB from GitHub actions
         uses: supercharge/mongodb-github-action@1.6.0
         with:
