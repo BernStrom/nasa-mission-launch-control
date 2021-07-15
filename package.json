@@ -4,21 +4,21 @@
   "description": "NASA Mission Launch Control for interstellar space flights",
   "main": "index.js",
   "scripts": {
-    "install-server": "cd server && yarn",
-    "install-client": "cd client && yarn",
+    "install-server": "yarn --cwd ./server/ install",
+    "install-client": "yarn --cwd ./client/ install",
     "install": "yarn install-server && yarn install-client",
-    "server": "cd server && yarn watch",
-    "client": "cd client && yarn start",
+    "server": "yarn --cwd ./server/ watch",
+    "client": "yarn --cwd ./client/ start",
     "watch": "yarn server & yarn client",
-    "deploy": "cd client && yarn build && cd .. && cd server && yarn start",
-    "deploy-cluster": "cd client && yarn build && cd .. && cd server && yarn cluster",
-    "test": "cd server && yarn test && cd .. && cd client && yarn test"
+    "deploy": "yarn --cwd ./client/ build && yarn --cwd ./server/ start",
+    "deploy-cluster": "yarn --cwd ./client/ build && yarn --cwd ./server/ cluster",
+    "test": "yarn --cwd ./server/ test && yarn --cwd ./client/ test"
   },
   "repository": {
     "url": "https://github.com/BernStrom/nasa-mission-launch-control",
     "type": "git"
   },
-  "author": "Bern <bernnystrom@gmail.com>",
+  "author": "Bern",
   "license": "MIT",
   "private": true
 }
