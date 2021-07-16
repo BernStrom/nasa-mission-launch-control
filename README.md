@@ -52,9 +52,11 @@ MERN stands for MongoDB, Express, React, Node, after the four key technologies t
 - :electron:&nbsp; [React](https://reactjs.org/ 'React.js')
 - :link:&nbsp; [React Router](https://reactrouter.com/ 'React Router')
 - :robot:&nbsp; [Arwes](https://arwes.dev/ 'Arwes')
-- :electric-plug:&nbsp; [Express](https://expressjs.com/ 'Express.js')
-- :file-cabinet:&nbsp; [MongoDB](https://www.mongodb.com/ 'MongoDB')
+- :electric_plug:&nbsp; [Express](https://expressjs.com/ 'Express.js')
+- :file_cabinet:&nbsp; [MongoDB](https://www.mongodb.com/ 'MongoDB')
 - :chipmunk:&nbsp; [Mongoose](https://mongoosejs.com/ 'Mongoose')
+- :whale:&nbsp; [Docker](https://www.docker.com/ 'Docker')
+- :orange_square:&nbsp; [AWS EC2](https://aws.amazon.com/ec2/?nc2=h_ql_prod_fs_ec2&ec2-whats-new.sort-by=item.additionalFields.postDateTime&ec2-whats-new.sort-order=desc 'Amazon EC2')
 
 ## :sparkles: Main Features
 
